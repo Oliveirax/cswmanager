@@ -4,8 +4,9 @@ import {Deserializable} from './deserializable.model';
 
 export class Allocation implements Deserializable{
   public id: number;
+  public employeeId: number;
   public projectId: number;
-  public userId: number;
+  public percentage: number;
 
   deserialize(input: any): this {
     return Object.assign(this, input);

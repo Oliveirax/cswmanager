@@ -1,0 +1,44 @@
+{
+  "platoon": [
+    { "id": 0, "name": "Alchemists" },
+    { "id": 1, "name": "Terrans" },
+    { "id": 2, "name": "Klingon" },
+    { "id": 3, "name": "Borg" },
+    { "id": 4, "name": "Vision" },
+    { "id": 5, "name": "Vulcan" },
+    { "id": 6, "name": "The Q" },
+    { "id": 7, "name": "Species" },
+    { "id": 7, "name": "Machimbombo"},
+    { "id": 7, "name": "Jedi" },
+    { "id": 7, "name": "Sith" },
+    { "id": 7, "name": "Spartans" },
+    { "id": 7, "name": "Fusion" },
+    { "id": 7, "name": "Rebels"}
+  ],
+  "role": [
+    { "id": 0, "name": "JE" },
+    { "id": 1, "name": "PE" },
+    { "id": 2, "name": "SE" },
+    { "id": 3, "name": "TM" }
+  ],
+  "project": [
+    { "id": 0, "name": "Project A" },
+    { "id": 1, "name": "Project B" },
+    { "id": 2, "name": "Project C" },
+    { "id": 3, "name": "Project D" }
+  ],
+  "employee": [
+    { "id": 0, "name": "Luis Oliveira", "startDate": "23-01-2018", "roleId": 2, "platoonId": 0 },
+    { "id": 1, "name": "Diana Baião", "startDate": "14-01-2020", "roleId": 1, "platoonId": 1 },
+    { "id": 2, "name": "Ana Simões", "startDate": "07-01-2020", "roleId": 3, "platoonId": 2 },
+    { "id": 3, "name": "António Marcão", "startDate": "08-01-2020", "roleId": 2, "platoonId": 3 },
+    { "id": 4, "name": "Elton Fernades", "startDate": "24-09-2019", "roleId": 0, "platoonId": 4 }
+  ],
+  "allocation": [
+    {"id": 0, "employeeId":0, "projectId": 0, "percentage": 50 },
+    {"id": 1, "employeeId":0, "projectId": 1, "percentage": 50 },
+    {"id": 2, "employeeId":1, "projectId": 2, "percentage": 100 },
+    {"id": 3, "employeeId":2, "projectId": 3, "percentage": 100 },
+    {"id": 4, "employeeId":3, "projectId": 4, "percentage": 100 }
+  ]
+}
