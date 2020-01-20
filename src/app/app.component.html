@@ -1,5 +1,23 @@
-<div style="width: 400px; margin: auto;">
-  <h2>Angular 7 model showcase</h2>
+<div>
+  <div class="header">
+    <h1>CSW employees and projects</h1>
+  </div>
+
+  <div class="navbar">
+    <!-- using router links to avoid page reload -->
+    <a [routerLink]="['/']">Employees</a>
+    <a [routerLink]="['projects']">Projects</a>
+    <a href="#" class="right">Reload</a>
+  </div>
+
+  <hr>
+
+  <div id="main">
+    <router-outlet></router-outlet>
+  <div>
+
+  <hr>
+
   <input type="number" [(ngModel)]="employeeId" placeholder="Employee ID">
   <button type="button" (click)="getEmployee()">Get Employee</button>
 
