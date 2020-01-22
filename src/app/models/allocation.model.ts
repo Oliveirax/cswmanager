@@ -1,4 +1,4 @@
-// A model for a project allocation. References a user and a project
+// A model for a project allocation. References an employee and a project
 
 import {Deserializable} from './deserializable.model';
 

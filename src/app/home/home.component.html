@@ -1,1 +1,50 @@
 <p>home works!</p>
+
+<div *ngIf="data && data.employees">
+  <hr>
+  <ul>
+    <li *ngFor="let employee of data.employees">
+      {{employee.name}}
+    </li>
+  </ul>
+</div>
+
+<div *ngIf="data && data.roles">
+  <hr>
+  <ul>
+    <li *ngFor="let role of data.roles">
+      {{role.name}}
+    </li>
+  </ul>
+
+</div>
+
+<div *ngIf="data && data.allocations">
+  <hr>
+  <ul>
+    <li *ngFor="let allocation of data.allocations">
+      {{allocation.percentage}}
+    </li>
+  </ul>
+
+</div>
+
+<div *ngIf="data && data.platoons">
+  <hr>
+  <ul>
+    <li *ngFor="let platoon of data.platoons">
+      {{platoon.name}}
+    </li>
+  </ul>
+
+</div>
+
+<div *ngIf="data && data.projects">
+  <hr>
+  <ul>
+    <li *ngFor="let project of data.projects">
+      {{project.name}}
+    </li>
+  </ul>
+
+</div>
