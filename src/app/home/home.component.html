@@ -1,50 +1,27 @@
-<p>home works!</p>
 
-<div *ngIf="data && data.employees">
-  <hr>
-  <ul>
-    <li *ngFor="let employee of data.employees">
-      {{employee.name}}
-    </li>
-  </ul>
-</div>
 
-<div *ngIf="data && data.roles">
-  <hr>
-  <ul>
-    <li *ngFor="let role of data.roles">
-      {{role.name}}
-    </li>
-  </ul>
+<div>
+  <button type="button" name="button">Add</button>
+  <button type="button" name="button">Edit</button>
+  <button type="button" name="button">Delete</button>
 
 </div>
 
-<div *ngIf="data && data.allocations">
-  <hr>
-  <ul>
-    <li *ngFor="let allocation of data.allocations">
-      {{allocation.percentage}}
-    </li>
-  </ul>
-
-</div>
-
-<div *ngIf="data && data.platoons">
-  <hr>
-  <ul>
-    <li *ngFor="let platoon of data.platoons">
-      {{platoon.name}}
-    </li>
-  </ul>
-
-</div>
-
-<div *ngIf="data && data.projects">
-  <hr>
-  <ul>
-    <li *ngFor="let project of data.projects">
-      {{project.name}}
-    </li>
-  </ul>
-
+<div *ngIf="data && data.employees && data.roles && data.platoons">
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Start Date</th>
+      <th>Role</th>
+      <th>Platoon</th>
+      <th></th>
+    </tr>
+    <tr *ngFor="let employee of data.employees">
+      <td>{{employee.name}}</td>
+      <td>{{employee.startDate}}</td>
+      <td>{{data.roles[employee.roleId].name}}</td>
+      <td>{{data.platoons[employee.platoonId].name}}</td>
+      <td><a>Projects</a></td>
+    </tr>
+  </table>
 </div>

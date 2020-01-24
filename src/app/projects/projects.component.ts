@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+import { DataService } from '../services/data.service';
+import { Data } from '../models/data.model';
+
 @Component({
   selector: 'app-projects',
   templateUrl: './projects.component.html',
@@ -7,9 +10,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProjectsComponent implements OnInit {
 
-  constructor() { }
+  public data: Data;
 
-  ngOnInit() {
+  constructor( private dataService: DataService ) {
+    console.log("projects component NEW");
   }
 
+  ngOnInit() {
+    console.log("projects component INIT");
+
+    this.dataService.getData().subscribe(
+      value => {
+        this.data=value;
+        console.log("projects got the data");
+      }
+    )
+  }
 }
