@@ -7,7 +7,7 @@
     <!-- using router links to avoid page reload -->
     <a [routerLink]="['/']">Employees</a>
     <a [routerLink]="['projects']">Projects</a>
-    <a href="#" class="right">Reload</a>
+    <a (click)="reload()" class="right">Reset</a>
   </div>
 
   <hr>
@@ -17,33 +17,3 @@
   <div>
 
   <hr>
-
-  <input type="number" [(ngModel)]="employeeId" placeholder="Employee ID">
-  <button type="button" (click)="getEmployee()">Get Employee</button>
-
-  <button type="button" (click)="getAllEmployees()">Get all Employees</button>
-
-  <button type="button" (click)="getAllRoles()">Get all Roles</button>
-
-  <div *ngIf="employee">
-    Employee is called {{employee.name}}. his startdate is {{employee.startDate}}
-  </div>
-
-  <div *ngIf="employees">
-    <hr>
-    <ul>
-      <li *ngFor="let employee of employees;">
-        {{employee.name}}
-      </li>
-    </ul>
-  </div>
-
-  <div *ngIf="roles">
-    <hr>
-    <ul>
-      <li *ngFor="let role of roles;">
-        {{role.name}}
-      </li>
-    </ul>
-  </div>
-</div>

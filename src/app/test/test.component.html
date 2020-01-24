@@ -1,0 +1,54 @@
+<p>Webservices test</p>
+
+<div *ngIf="data && data.employees">
+  <hr>
+  <p>Employees</p>
+  <ul>
+    <li *ngFor="let employee of data.employees">
+      {{employee.name}}
+    </li>
+  </ul>
+</div>
+
+<div *ngIf="data && data.roles">
+  <hr>
+  <p>Roles</p>
+  <ul>
+    <li *ngFor="let role of data.roles">
+      {{role.name}}
+    </li>
+  </ul>
+
+</div>
+
+<div *ngIf="data && data.allocations">
+  <hr>
+  <p>Allocations</p>
+  <ul>
+    <li *ngFor="let allocation of data.allocations">
+      {{allocation.percentage}}
+    </li>
+  </ul>
+
+</div>
+
+<div *ngIf="data && data.platoons">
+  <hr>
+  <p>Platoons</p>
+  <ul>
+    <li *ngFor="let platoon of data.platoons">
+      {{platoon.name}}
+    </li>
+  </ul>
+
+</div>
+
+<div *ngIf="data && data.projects">
+  <hr>
+  <p>Projects</p>
+  <ul>
+    <li *ngFor="let project of data.projects">
+      {{project.name}}
+    </li>
+  </ul>
+</div>
