@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { DataService } from '../services/data.service';
 import { Data } from '../models/data.model';
+import { Project } from '../models/project.model'
 
 @Component({
   selector: 'app-projects',
@@ -11,6 +12,7 @@ import { Data } from '../models/data.model';
 export class ProjectsComponent implements OnInit {
 
   public data: Data;
+  public selectedProject: Project;
 
   constructor( private dataService: DataService ) {
     console.log("projects component NEW");
@@ -25,5 +27,14 @@ export class ProjectsComponent implements OnInit {
         console.log("projects got the data");
       }
     )
+  }
+
+  rowSelected(project: Project) {
+    this.selectedProject = project;
+    console.log("clicked: " + project.name)
+  }
+
+  openEmployees(project: Project){
+    console.log("open employees for: " + project.name);
   }
 }

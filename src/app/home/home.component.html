@@ -1,10 +1,10 @@
 
 
-<div>
+<div class="editbar">
   <button type="button" name="button">Add</button>
   <button type="button" name="button">Edit</button>
   <button type="button" name="button">Delete</button>
-
+  <a *ngIf="selectedEmployee"> {{selectedEmployee.name}} </a>
 </div>
 
 <div *ngIf="data && data.employees && data.roles && data.platoons">
@@ -16,12 +16,12 @@
       <th>Platoon</th>
       <th></th>
     </tr>
-    <tr *ngFor="let employee of data.employees">
+    <tr *ngFor="let employee of data.employees" (click)="rowSelected(employee)">
       <td>{{employee.name}}</td>
       <td>{{employee.startDate}}</td>
       <td>{{data.roles[employee.roleId].name}}</td>
       <td>{{data.platoons[employee.platoonId].name}}</td>
-      <td><a>Projects</a></td>
+      <td><a (click)="openProjects(employee)">Projects</a></td>
     </tr>
   </table>
 </div>

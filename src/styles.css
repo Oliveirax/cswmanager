@@ -12,17 +12,17 @@
 
 /* Style the top navigation bar */
 .navbar {
-  overflow: hidden; /* Hide overflow */
-  background-color: #333; /* Dark background color */
+  overflow: hidden;
+  background-color: #333;
 }
 
 /* Style the navigation bar links */
 .navbar a {
-  float: left; /* Make sure that the links stay side-by-side */
-  display: block; /* Change the display to block, for responsive reasons (see below) */
-  color: white; /* White text color */
-  text-align: center; /* Center the text */
-  padding: 14px 20px; /* Add some padding */
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
   text-decoration: none; /* Remove underline */
 }
 
@@ -37,6 +37,15 @@
   color: black; /* Black text color */
 }
 
+.editbar {
+  padding: 10px;
+}
+
+.editbar button{
+  margin-right: 10px;
+}
+
+
 table {
   border-collapse: collapse;
   width: 100%;
@@ -45,6 +54,11 @@ table {
 table td, table th {
   border: 1px solid #ddd;
   padding: 8px;
+}
+
+table td a {
+  color: blue;
+  text-decoration: underline;
 }
 
 table tr:nth-child(even){background-color: #f2f2f2;}
